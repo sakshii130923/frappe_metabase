@@ -1,7 +1,5 @@
 import requests
 
-import frappe
-
 
 def test_metabase_connection(server_url: str, secret_key: str) -> tuple[bool, str]:
     """
