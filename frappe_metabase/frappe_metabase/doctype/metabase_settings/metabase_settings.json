@@ -1,0 +1,79 @@
+{
+  "name": "Metabase Settings",
+  "doctype": "DocType",
+  "module": "Frappe Metabase",
+  "issingle": 1,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "sb_connection",
+      "fieldtype": "Section Break",
+      "label": "Connection"
+    },
+    {
+      "fieldname": "server_url",
+      "fieldtype": "Data",
+      "label": "Metabase Server URL",
+      "reqd": 1,
+      "description": "e.g. https://metabase.yourdomain.com or http://your-ip:3000"
+    },
+    {
+      "fieldname": "secret_key",
+      "fieldtype": "Password",
+      "label": "Embedding Secret Key",
+      "reqd": 1,
+      "description": "Found in Metabase Admin → Settings → Embedding"
+    },
+    {
+      "fieldname": "cb_connection",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "default_expiry_min",
+      "fieldtype": "Int",
+      "label": "Default Token Expiry (minutes)",
+      "default": "10",
+      "description": "JWT token lifetime. Each page load generates a fresh token."
+    },
+    {
+      "fieldname": "enable_dark_mode",
+      "fieldtype": "Check",
+      "label": "Enable Dark Mode",
+      "default": "0",
+      "description": "Auto-apply Metabase night theme when embedding"
+    },
+    {
+      "fieldname": "sb_test",
+      "fieldtype": "Section Break",
+      "label": "Connection Test"
+    },
+    {
+      "fieldname": "test_connection",
+      "fieldtype": "Button",
+      "label": "Test Connection"
+    },
+    {
+      "fieldname": "connection_status",
+      "fieldtype": "Data",
+      "label": "Status",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ],
+  "sort_field": "creation",
+  "sort_order": "ASC"
+}

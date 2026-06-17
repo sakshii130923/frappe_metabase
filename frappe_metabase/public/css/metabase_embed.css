@@ -1,0 +1,126 @@
+/* Frappe Metabase - Embed & Gallery Styles */
+
+/* Gallery Grid */
+.metabase-gallery-grid {
+    padding: 15px;
+}
+
+.metabase-gallery-section {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--text-lg);
+    letter-spacing: 0.5px;
+    margin: 25px 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.metabase-gallery-section:first-child {
+    margin-top: 5px;
+}
+
+.metabase-gallery-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* Card */
+.metabase-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metabase-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.metabase-card-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 123, 255, 0.08);
+    border-radius: 10px;
+    color: var(--primary);
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+
+[data-theme="dark"] .metabase-card-icon {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.metabase-card:hover .metabase-card-icon {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.metabase-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.metabase-card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.metabase-card-desc {
+    margin: 6px 0 0 0;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Embed iframe */
+.metabase-embed-iframe {
+    background: var(--card-bg);
+}
+
+.metabase-embed-container {
+    margin-top: 15px;
+}
+
+.metabase-embed-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Loading state */
+.metabase-loading {
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text-muted);
+}
+
+.metabase-loading i {
+    font-size: 24px;
+}
+
+.metabase-loading p {
+    margin-top: 10px;
+}

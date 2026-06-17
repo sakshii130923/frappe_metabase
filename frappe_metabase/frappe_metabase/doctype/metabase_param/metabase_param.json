@@ -1,0 +1,62 @@
+{
+  "name": "Metabase Param",
+  "doctype": "DocType",
+  "module": "Frappe Metabase",
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "param_name",
+      "fieldtype": "Data",
+      "label": "Metabase Filter Parameter",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 2,
+      "description": "Must match the filter parameter name in Metabase exactly"
+    },
+    {
+      "fieldname": "source_type",
+      "fieldtype": "Select",
+      "label": "Value Source",
+      "options": "Static\nUser Field\nFrappe Method",
+      "default": "Static",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "static_value",
+      "fieldtype": "Data",
+      "label": "Static Value",
+      "depends_on": "eval:doc.source_type=='Static'",
+      "mandatory_depends_on": "eval:doc.source_type=='Static'",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "user_field",
+      "fieldtype": "Data",
+      "label": "User Field",
+      "depends_on": "eval:doc.source_type=='User Field'",
+      "mandatory_depends_on": "eval:doc.source_type=='User Field'",
+      "in_list_view": 1,
+      "columns": 2,
+      "description": "Field from User doctype, e.g. 'company' or 'default_warehouse'"
+    },
+    {
+      "fieldname": "frappe_method",
+      "fieldtype": "Data",
+      "label": "Frappe Method",
+      "depends_on": "eval:doc.source_type=='Frappe Method'",
+      "mandatory_depends_on": "eval:doc.source_type=='Frappe Method'",
+      "in_list_view": 1,
+      "columns": 2,
+      "description": "Dotted path to a whitelisted method, e.g. 'myapp.utils.get_warehouses'"
+    }
+  ],
+  "permissions": [],
+  "sort_field": "creation",
+  "sort_order": "ASC"
+}

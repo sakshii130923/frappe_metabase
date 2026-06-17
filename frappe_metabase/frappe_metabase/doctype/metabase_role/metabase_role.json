@@ -1,0 +1,22 @@
+{
+  "name": "Metabase Role",
+  "doctype": "DocType",
+  "module": "Frappe Metabase",
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "role",
+      "fieldtype": "Link",
+      "label": "Role",
+      "options": "Role",
+      "reqd": 1,
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [],
+  "sort_field": "creation",
+  "sort_order": "ASC"
+}

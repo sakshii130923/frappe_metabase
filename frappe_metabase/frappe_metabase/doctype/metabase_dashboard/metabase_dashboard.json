@@ -1,0 +1,134 @@
+{
+  "name": "Metabase Dashboard",
+  "doctype": "DocType",
+  "module": "Frappe Metabase",
+  "autoname": "field:title",
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "sb_details",
+      "fieldtype": "Section Break",
+      "label": "Dashboard Details"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 1,
+      "unique": 1,
+      "description": "Display name shown in Frappe"
+    },
+    {
+      "fieldname": "dashboard_id",
+      "fieldtype": "Int",
+      "label": "Metabase Dashboard ID",
+      "reqd": 1,
+      "description": "Numeric ID from Metabase URL, e.g. /dashboard/3 → enter 3"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "cb_details",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "expiry_override_min",
+      "fieldtype": "Int",
+      "label": "Token Expiry Override (minutes)",
+      "description": "Leave blank to use the default from Metabase Settings"
+    },
+    {
+      "fieldname": "sb_display",
+      "fieldtype": "Section Break",
+      "label": "Display Options"
+    },
+    {
+      "fieldname": "show_border",
+      "fieldtype": "Check",
+      "label": "Show Border",
+      "default": "0"
+    },
+    {
+      "fieldname": "show_title",
+      "fieldtype": "Check",
+      "label": "Show Metabase Title",
+      "default": "0"
+    },
+    {
+      "fieldname": "iframe_height",
+      "fieldtype": "Int",
+      "label": "Iframe Height (px)",
+      "default": "800",
+      "description": "Height in pixels. Use 0 for auto-resize (experimental)."
+    },
+    {
+      "fieldname": "sb_access",
+      "fieldtype": "Section Break",
+      "label": "Access Control"
+    },
+    {
+      "fieldname": "allowed_roles",
+      "fieldtype": "Table",
+      "label": "Allowed Roles",
+      "options": "Metabase Role",
+      "description": "Leave empty to allow all logged-in users"
+    },
+    {
+      "fieldname": "sb_params",
+      "fieldtype": "Section Break",
+      "label": "Locked Parameters",
+      "collapsible": 1,
+      "description": "Map Frappe data to Metabase filter parameters. These are locked server-side and cannot be modified by the end user."
+    },
+    {
+      "fieldname": "locked_params",
+      "fieldtype": "Table",
+      "label": "Locked Parameters",
+      "options": "Metabase Param"
+    },
+    {
+      "fieldname": "sb_preview",
+      "fieldtype": "Section Break",
+      "label": "Preview"
+    },
+    {
+      "fieldname": "preview_dashboard",
+      "fieldtype": "Button",
+      "label": "Preview Dashboard"
+    },
+    {
+      "fieldname": "embed_html",
+      "fieldtype": "HTML",
+      "label": "Dashboard Preview"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "title_field": "title"
+}

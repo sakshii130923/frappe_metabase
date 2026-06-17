@@ -1,0 +1,13 @@
+{
+  "name": "metabase-gallery",
+  "doctype": "Page",
+  "module": "Frappe Metabase",
+  "title": "Metabase Gallery",
+  "icon": "fa fa-bar-chart",
+  "single_column": 1,
+  "standard": "Yes",
+  "roles": [
+    { "role": "System Manager" },
+    { "role": "Administrator" }
+  ]
+}
