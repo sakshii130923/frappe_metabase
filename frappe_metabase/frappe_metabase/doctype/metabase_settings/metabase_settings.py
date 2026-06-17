@@ -3,7 +3,6 @@ from frappe.model.document import Document
 
 
 class MetabaseSettings(Document):
-
     def validate(self):
         # Strip trailing slash from server URL
         if self.server_url:

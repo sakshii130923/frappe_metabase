@@ -3,7 +3,6 @@ from frappe.model.document import Document
 
 
 class MetabaseQuestion(Document):
-
     def validate(self):
         if self.question_id and self.question_id < 1:
             frappe.throw("Question ID must be a positive integer.")

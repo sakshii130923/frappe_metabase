@@ -96,7 +96,5 @@ def _resolve_frappe_method(method_path: str) -> str | list | None:
         result = method()
         return result
     except Exception as e:
-        frappe.log_error(
-            f"Metabase Param: Error calling method '{method_path}': {e}"
-        )
+        frappe.log_error(f"Metabase Param: Error calling method '{method_path}': {e}")
         return None

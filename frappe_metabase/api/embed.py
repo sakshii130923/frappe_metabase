@@ -20,7 +20,9 @@ def get_embed_url(doctype: str, name: str) -> dict:
         dict: { url, title, height, resource_type }
     """
     if doctype not in ("Metabase Dashboard", "Metabase Question"):
-        frappe.throw("Invalid doctype. Must be Metabase Dashboard or Metabase Question.")
+        frappe.throw(
+            "Invalid doctype. Must be Metabase Dashboard or Metabase Question."
+        )
 
     doc = frappe.get_doc(doctype, name)
 

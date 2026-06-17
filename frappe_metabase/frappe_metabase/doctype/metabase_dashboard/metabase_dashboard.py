@@ -3,7 +3,6 @@ from frappe.model.document import Document
 
 
 class MetabaseDashboard(Document):
-
     def validate(self):
         if self.dashboard_id and self.dashboard_id < 1:
             frappe.throw("Dashboard ID must be a positive integer.")
