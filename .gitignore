@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Log files
+*.log
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+
+# Ruff Linter Cache
+.ruff_cache/
