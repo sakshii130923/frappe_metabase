@@ -1,5 +1,5 @@
 [project]
-name = "frappe-metabase"
+name = "frappe_metabase"
 authors = [
     { name = "Frappe Metabase Contributors" }
 ]
